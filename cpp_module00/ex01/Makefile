@@ -1,7 +1,7 @@
 CC		= clang++
 CFLAGS	= -Wall -Wextra -Werror -Wfatal-errors -std=c++98
 NAME	= phonebook
-SRCS	= phonebook.cpp
+SRCS	= phonebook.cpp contact.cpp
 RM		= rm -rf
 ARGV	= 
 
