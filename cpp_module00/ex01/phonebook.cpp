@@ -35,11 +35,11 @@ void show_list(Contact *contacts, size_t len)
 }
 void search(Contact *contacts, size_t len)
 {
-	long double idx;
+	int idx;
 
 	show_list(contacts, len);
 	std::cout << "Index: ";
-	if ((std::cin >> std::get_money(idx)).good()) {
+	if ((std::cin >> idx).good()) {
 		contacts[(int)idx - 1].display();
 	}
 	std::cin.clear();
@@ -53,33 +53,33 @@ int main(void) {
 
 	len = 0;
 	// temp for testing
-	// contacts[len++].initialize((std::string[11]){
-	// 	"Shan Chien",
-	// 	"Tan",
-	// 	"Stan",
-	// 	"0123456789",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"in your dreams",
-	// }, 11);
+	 contacts[len++].initialize((std::string[11]){
+	 	"Shan Chien",
+	 	"Tan",
+	 	"Stan",
+	 	"0123456789",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"in your dreams",
+	 }, 11);
 
-	// contacts[len++].initialize((std::string[11]){
-	// 	"William",
-	// 	"???",
-	// 	"like I know",
-	// 	"0198765432",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"-",
-	// 	"???????",
-	// }, 11);
+	 contacts[len++].initialize((std::string[11]){
+	 	"William",
+	 	"???",
+	 	"like I know",
+	 	"0198765432",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"-",
+	 	"???????",
+	 }, 11);
 
 	while (true) {
 		std::cout << "Command: ";

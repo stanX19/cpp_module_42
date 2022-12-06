@@ -1,7 +1,16 @@
 #include "phonebook.hpp"
 
+static void* copy_promptval(prompt_val *dst, prompt_val *src, size_t n)
+{
+	for (size_t i = 0; i < n; i++) {
+		dst[i].prompt = src[i].prompt;
+		dst[i].ptr = src[i].ptr;
+	}
+	return dst;
+}
+
 Contact::Contact() {
-	memcpy(this->prompts, (prompt_val[11])
+	copy_promptval(this->prompts, (prompt_val[11])
 	{
 		{"First Name      : ", &first_name},
 		{"Last Name       : ", &last_name},
@@ -15,7 +24,7 @@ Contact::Contact() {
 		{"Underwear color : ", &underwear_color},
 		{"Darkest secret  : ", &darkest_secret}
 	},
-	sizeof(this->prompts));
+	11);
 };
 
 void Contact::record(void) {
