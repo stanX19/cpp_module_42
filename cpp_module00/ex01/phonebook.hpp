@@ -26,5 +26,5 @@ public:
 	Contact();
 	void record(void);
 	void display(void);
-	void basic(int width);
+	void initialize(std::string *argv, int size);
 };
